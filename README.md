@@ -8,7 +8,7 @@
 
 <br />
 
-<img src="https://o.uguu.se/KntRsfPu.jpg" alt="Zenitsu-BOT" height="300">
+<img src="https://files.catbox.moe/nphv57.jpg" alt="Zenitsu-BOT" height="300">
 
 <br />
 
@@ -19,8 +19,8 @@
 
 <br />
 
-<img src="https://img.shields.io/badge/Developer-ChrisGaaju-purple?style=flat-square&logo=github" />
-<img src="https://img.shields.io/badge/Username-spark--x1-orange?style=flat-square&logo=github" />
+<img src="https://img.shields.io/badge/Developer-Xchristech-purple?style=flat-square&logo=github" />
+<img src="https://img.shields.io/badge/Username-zenitsu-orange?style=flat-square&logo=github" />
 <img src="https://img.shields.io/badge/Multi_Device-Enabled-orange?style=flat-square&logo=android" />
 <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square&logo=opensourceinitiative" />
 
@@ -71,7 +71,7 @@
 
 <div align="center">
 
-Made with ❤️ by LordGaaju | ZENITSU-X1
+Made with ❤️ by LordGaaju | Zenitsu-BOT 
 
 <img src="https://img.shields.io/badge/⭐_Star_this_Repository-yellow?style=for-the-badge&logo=github" />
 

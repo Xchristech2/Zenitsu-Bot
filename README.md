@@ -1,14 +1,14 @@
-# 🤖 Benzo-MD
+# 🤖 Zenitsu-BOT
 
 <div align="center">
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=33ff00&center=true&width=910&height=100&lines=Benzo-MD;Multi+Device+Whatsapp+Bot;Coded+By+Amon" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=33ff00&center=true&width=910&height=100&lines=Zenitsu-BOT;Multi+Device+Whatsapp+Bot;Coded+By+ChrisGaaju" alt="Typing SVG" />
 </a>
 
 <br />
 
-<img src="https://o.uguu.se/KntRsfPu.jpg" alt="Benzo-MD" height="300">
+<img src="https://o.uguu.se/KntRsfPu.jpg" alt="Zenitsu-BOT" height="300">
 
 <br />
 
@@ -19,7 +19,7 @@
 
 <br />
 
-<img src="https://img.shields.io/badge/Developer-Amon-purple?style=flat-square&logo=github" />
+<img src="https://img.shields.io/badge/Developer-ChrisGaaju-purple?style=flat-square&logo=github" />
 <img src="https://img.shields.io/badge/Username-spark--x1-orange?style=flat-square&logo=github" />
 <img src="https://img.shields.io/badge/Multi_Device-Enabled-orange?style=flat-square&logo=android" />
 <img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square&logo=opensourceinitiative" />
@@ -32,7 +32,7 @@
 
 ### Step 1: Fork Repository
 <div align="center">
-  <a href="https://github.com/spark-x1/Benzo-MD/fork">
+  <a href="https://github.com/Xchristech2/Zenitsu-BOT/fork">
     <img src="https://img.shields.io/badge/Fork-Repository-blue?style=for-the-badge" alt="Fork Repository"/>
   </a>
 </div>
@@ -71,7 +71,7 @@
 
 <div align="center">
 
-Made with ❤️ by Amon | Spark-X1
+Made with ❤️ by LordGaaju | ZENITSU-X1
 
 <img src="https://img.shields.io/badge/⭐_Star_this_Repository-yellow?style=for-the-badge&logo=github" />
 
@@ -81,8 +81,8 @@ Made with ❤️ by Amon | Spark-X1
 
 ```bash
 # Clone repository
-git clone https://github.com/spark-x1/Benzo-MD.git
-cd Benzo-MD
+git clone https://github.com/Xchristech2/Zenitsu-BOT.git
+cd Zentisu-BOT
 
 # Install dependencies
 npm install

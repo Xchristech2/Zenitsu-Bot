@@ -28,8 +28,8 @@ async function autoreadCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363422423159626@newsletter',
-                        newsletterName: 'BenzoBot MD',
+                        newsletterJid: '120363406735242612@newsletter',
+                        newsletterName: 'Zenitsu BOT',
                         serverMessageId: -1
                     }
                 }
@@ -59,8 +59,8 @@ async function autoreadCommand(sock, chatId, message) {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363422423159626@newsletter',
-                            newsletterName: 'BenzoBot MD',
+                            newsletterJid: '120363406735242612@newsletter',
+                            newsletterName: 'Zenitsu BOT',
                             serverMessageId: -1
                         }
                     }
@@ -82,8 +82,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363422423159626@newsletter',
-                    newsletterName: 'BenzoBot MD',
+                    newsletterJid: '120363406735242612@newsletter',
+                    newsletterName: 'Zenitsu BOT',
                     serverMessageId: -1
                 }
             }
@@ -97,8 +97,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363422423159626@newsletter',
-                    newsletterName: 'BenzoBot MD',
+                    newsletterJid: '120363406735242612@newsletter',
+                    newsletterName: 'Zenitsu BOT',
                     serverMessageId: -1
                 }
             }
@@ -152,7 +152,7 @@ function isBotMentionedInMessage(message, botNumber) {
         }
         
         // Check for bot name mentions (optional, can be customized)
-        const botNames = [global.botname?.toLowerCase(), 'bot', 'knight', 'knight bot'];
+        const botNames = [global.botname?.toLowerCase(), 'bot', 'zenitsu', 'zenitsu bot'];
         const words = textContent.toLowerCase().split(/\s+/);
         if (botNames.some(name => words.includes(name))) {
             return true;

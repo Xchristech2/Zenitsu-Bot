@@ -32,7 +32,7 @@ ORG:Zenitsu-BOT;
 TEL;type=CELL;type=VOICE;waid=${ownerNumber}:+${ownerNumber}
 X-WA-BIZ-NAME:${ownerName}
 NOTE:Owner of Zenitsu-MD WhatsApp Bot
-URL:https://whatsapp.com/channel/0029VbBaJvI7IUYbtCeaPh0I
+URL:https://whatsapp.com/channel/0029Vb6zuIiLikg7V58lXp1A
 END:VCARD`;
         
         // Check if image exists in assets folder
@@ -62,7 +62,7 @@ END:VCARD`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363406476499117@newsletter',
+                        newsletterJid: '120363406735242612@newsletter',
                         newsletterName: 'Zenitsu-MD bot',
                         serverMessageId: -1
                     }
@@ -100,7 +100,7 @@ END:VCARD`;
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363406476499117@newsletter',
+                        newsletterJid: '120363406735242612@newsletter',
                         newsletterName: 'Zenitsu-MD bot',
                         serverMessageId: -1
                     }
@@ -126,7 +126,7 @@ END:VCARD`;
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363406476499117@newsletter',
+                    newsletterJid: '120363406735242612@newsletter',
                     newsletterName: 'Zenitsu-BOT',
                     serverMessageId: -1
                 }

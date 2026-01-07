@@ -325,7 +325,7 @@ async function xxxCommand(sock, chatId, message) {
             
             try {
                 await sock.sendMessage(chatId, {
-                    text: `✅ *BENZO-MD XXX BOT*\n\n🔗 *Link Detected*\n📥 Processing premium content...\n\n⚡ *Getting download information...*`,
+                    text: `✅ *ZENITSU-MD XXX BOT*\n\n🔗 *Link Detected*\n📥 Processing premium content...\n\n⚡ *Getting download information...*`,
                     edit: statusMsg.key
                 });
             } catch (editError) {
@@ -336,7 +336,7 @@ async function xxxCommand(sock, chatId, message) {
             }
         } else {
             // Search for content
-            console.log(`[BENZO-MD XXX] Searching for: "${searchQuery}"`);
+            console.log(`[ZENITSU-MD XXX] Searching for: "${searchQuery}"`);
             
             try {
                 await sock.sendMessage(chatId, {

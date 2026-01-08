@@ -57,7 +57,7 @@ async function goodbyeCommand(sock, chatId, message) {
         }, { quoted: message });
 
         await sock.sendMessage(chatId, {
-            text: `⚡ *ZENITSU-BOT*\n\n📊 *Goodbye System*\n\nStatus: ${isEnabled ? '✅ ENABLED' : '❌ DISABLED'}\n\nUsage:\n• .goodbye on - Enable\n• .goodbye off - Disable\n\n⭐ Powered by Benzo-MD`,
+            text: `⚡ *ZENITSU-BOT*\n\n📊 *Goodbye System*\n\nStatus: ${isEnabled ? '✅ ENABLED' : '❌ DISABLED'}\n\nUsage:\n• .goodbye on - Enable\n• .goodbye off - Disable\n\n⭐ Powered by Zenitsu-BOT`,
             edit: statusMsg.key
         });
     }

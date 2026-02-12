@@ -259,7 +259,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 return;
             } else if (buttonId === 'support') {
                 await sock.sendMessage(chatId, { 
-                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/FASqxzw60hB989DVmMOpRO?mode=wwt` 
+                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/HhuLiSRKTzdCP4NjCXkt21?mode=gi_t?mode=wwt` 
                 }, { quoted: message });
                 const isChannel = chatId.includes('@newsletter');
                 logSentMessage(chatId, 'Support link sent', isChannel);

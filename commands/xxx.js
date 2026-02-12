@@ -304,7 +304,7 @@ async function xxxCommand(sock, chatId, message) {
         let statusMsg;
         try {
             statusMsg = await sock.sendMessage(chatId, { 
-                text: `🔍 *BENZO-MD XXX BOT*\n\n*Searching:* "${searchQuery}"\n\n⏳ *Please wait while we process your request...*` 
+                text: `🔍 *ZENITSU-BOT XXX BOT*\n\n*Searching:* "${searchQuery}"\n\n⏳ *Please wait while we process your request...*` 
             }, { quoted: message });
         } catch (statusError) {
             console.log(`[ZENITSU-BOT XXX] Could not send quoted message, sending regular`);
@@ -370,7 +370,7 @@ async function xxxCommand(sock, chatId, message) {
             }
 
             if (!searchResults || searchResults.length === 0) {
-                console.log(`[BENZO-MD XXX] No results found for: "${searchQuery}"`);
+                console.log(`[ZENITSU-BOT XXX] No results found for: "${searchQuery}"`);
                 
                 try {
                     await sock.sendMessage(chatId, {

@@ -260,7 +260,7 @@ Version ${settings.version || '1.0.0'} · Active
 ✅ Online · ⚡ Active · 🛡️ Secured
 💾 ${usedMB}MB/${totalMB}MB · 📈 ${memPercent}%
 
-⭐ *Powered by Zentisu-BOT*`;
+⭐ *Powered by ZENITSU-BOT*`;
 
         // Update with menu ready
         await sock.sendMessage(chatId, {

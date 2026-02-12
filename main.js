@@ -195,8 +195,8 @@ const groupControlCommand = require('./commands/groupcontrol');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029VbBaJvI7IUYbtCeaPh0I";
-global.ytch = "Mr Unique Hacker";
+global.channelLink = "https://whatsapp.com/channel/0029VbBvGgyFsn0alyIDjw0z";
+global.ytch = "Xchristech";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -204,7 +204,7 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363406735242612@newsletter',
+            newsletterJid: '120363406588763460@newsletter',
             newsletterName: '𝙕𝙖𝙣𝙞𝙩𝙨𝙪 𝙗𝙤𝙩',
             serverMessageId: -1
         }

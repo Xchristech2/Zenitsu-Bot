@@ -197,7 +197,7 @@ async function tiktokCommand(sock, chatId, message) {
                               `⚡ *Quality:* HD\n` +
                               `🎬 *Format:* MP4\n\n` +
                               `🎬 *Video sent!*\n\n` +
-                              `⭐ *Zenitsu-BOR Task Complete* ⭐`,
+                              `⭐ *Zenitsu-BOT Task Complete* ⭐`,
                         edit: statusMsg.key
                     });
 

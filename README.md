@@ -1,9 +1,9 @@
-# 👑 QUEEN LUCY V3 🤖  
+# 🔱 ZENITSU BOT 🔱  
 ### ⚡ Multi-Device WhatsApp Bot  
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=FF1493&center=true&width=900&height=100&lines=QUEEN+LUCY+V3;Ultimate+WhatsApp+Bot;Coded+By+Chris+Gaaju" />
+<img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=FF1493&center=true&width=900&height=100&lines=ZENITSU+BOT;Ultimate+WhatsApp+Bot;Coded+By+Chris+Gaaju" />
 
 <img src="https://github.com/Xchristech2/Lucy-V3/blob/main/assets/bot_image.jpg" height="300"/>
 

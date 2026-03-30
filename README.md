@@ -103,7 +103,7 @@ It helps admins control groups easily while providing fun, AI, and utility featu
 
 ## 📖 About  
 
-QUEEN LUCY V3 helps WhatsApp admins manage large groups easily.  
+ZENITSU BOT helps WhatsApp admins manage large groups easily.  
 It uses the **Baileys library** and supports **multi-device connection**.  
 
 - Lightweight & fast ⚡  

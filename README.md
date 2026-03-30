@@ -10,9 +10,9 @@
 <br>
 
 <img src="https://img.shields.io/github/followers/Xchristech2?style=for-the-badge&label=Followers"/>
-<img src="https://img.shields.io/github/stars/Xchristech2/Lucy-V3?style=for-the-badge&label=Stars"/>
-<img src="https://img.shields.io/github/forks/Xchristech2/Lucy-V3?style=for-the-badge&label=Forks"/>
-<img src="https://img.shields.io/github/watchers/Xchristech2/Lucy-V3?style=for-the-badge&label=Watchers"/>
+<img src="https://img.shields.io/github/stars/Xchristech2/Zenitsu-Bot?style=for-the-badge&label=Stars"/>
+<img src="https://img.shields.io/github/forks/Xchristech2/Zenitsu-Bot?style=for-the-badge&label=Forks"/>
+<img src="https://img.shields.io/github/watchers/Xchristech2/Zenitsu-Bot?style=for-the-badge&label=Watchers"/>
 
 </div>
 
@@ -20,7 +20,7 @@
 
 ## ✨ Overview  
 
-> ⚡ **QUEEN LUCY V3** is a powerful WhatsApp bot built with Baileys for advanced group management and automation.  
+> ⚡ **ZENITSU BOT** is a powerful WhatsApp bot built with Baileys for advanced group management and automation.  
 It helps admins control groups easily while providing fun, AI, and utility features.
 
 ---
@@ -30,7 +30,7 @@ It helps admins control groups easily while providing fun, AI, and utility featu
 ### 🔹 Step 1: Fork Repository  
 
 <div align="center">
-<a href="https://github.com/Xchristech2/Lucy-V3/fork">
+<a href="https://github.com/Xchristech2/Zenitsu-Bot/fork">
 <img src="https://img.shields.io/badge/FORK%20REPO-000?style=for-the-badge&logo=github"/>
 </a>
 </div>
@@ -121,7 +121,7 @@ It uses the **Baileys library** and supports **multi-device connection**.
 ### ⚡ Setup  
 
 ```bash
-git clone https://github.com/Xchristech2/Lucy-V3.git
-cd Lucy-V3
+git clone https://github.com/Xchristech2/Zenitsu-Bot.git
+cd Zenitsu-Bot
 npm install
 node index.js

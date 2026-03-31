@@ -1,5 +1,5 @@
 /**
- * QueenLucy Bot - A WhatsApp Bot
+ * Zenitsu Bot - A WhatsApp Bot
  * Copyright (c) 2024 ChrisGaaju
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -73,7 +73,7 @@ setInterval(() => {
 let phoneNumber = "2348038915922"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
-global.botname = "LUCY V3"
+global.botname = "ZENITSU BOT"
 global.themeemoji = "•"
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
@@ -161,7 +161,7 @@ async function startXeonBotInc() {
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
                                 newsletterJid: '120363406588763460@newsletter',
-                                newsletterName: 'Lucy V3',
+                                newsletterName: 'Zenitsu Bot',
                                 serverMessageId: -1
                             }
                         }
@@ -280,7 +280,7 @@ async function startXeonBotInc() {
             }
 
             await delay(1999)
-            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'LUCY V3'} ]`)}\n\n`))
+            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'ZENITSU BOT'} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
             console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: Xchristech`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: Xchristech2`))

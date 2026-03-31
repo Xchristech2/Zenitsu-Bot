@@ -9,7 +9,7 @@ const settings = {
   maxStoreMessages: 20, 
   storeWriteInterval: 10000,
   description: "This is a bot for managing group commands and automating tasks.",
-  version: "3.0.7",
+  version: "4.0.0",
   updateZipUrl: "https://github.com/Xchristech2/Zenitsu-Bot/archive/refs/heads/main.zip",
 };
 

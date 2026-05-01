@@ -3,22 +3,21 @@ const settings = require("../settings");
 async function aliveCommand(sock, chatId, message) {
     try {
         const aliveMessage = `
-✨✨━━━━━━━━━━━━✨✨
-🤖 *${settings.botName || "Zenitsu Bot"} is ONLINE!*
+╭─❖ 「 ${settings.botName || "Zenitsu Bot"} 」 ❖─⬣
+│ 🤖 Status : ONLINE ✅
+│ ⚡ Version : ${settings.version || "4.0.0"}
+│ 🌐 Mode : ${settings.mode || "Private"}
+╰──────────────⬣
 
-🛠 *Version:* ${settings.version || "4.0.0"}
-⚡ *Status:* Active
-🌐 *Mode:* Public
+┌─〔 Features 〕
+│ • Group Tools
+│ • Antilink / Antispam
+│ • Fun & Games
+│ • AI Commands
+└─────────────
 
-🌟 *Features:*
-• Group Management & Admin Tools
-• Antilink & Antispam Protection
-• Fun & Game Commands
-• AI & Image Commands
-• And much more!
-
-📌 Type *.menu* to view all commands
-✨✨━━━━━━━━━━━━✨✨
+📌 Use *.menu* to explore commands
+⚡ Fast • Smooth • Reliable
 `;
 
         await sock.sendMessage(chatId, {
@@ -33,9 +32,12 @@ async function aliveCommand(sock, chatId, message) {
                 }
             }
         }, { quoted: message });
+
     } catch (error) {
         console.error('Error in alive command:', error);
-        await sock.sendMessage(chatId, { text: `🤖 ${settings.botName || "Zenitsu Bot"} is alive and running!` }, { quoted: message });
+        await sock.sendMessage(chatId, {
+            text: `🤖 ${settings.botName || "Zenitsu Bot"} is online!`
+        }, { quoted: message });
     }
 }
 

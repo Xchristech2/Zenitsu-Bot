@@ -5,54 +5,81 @@ const path = require('path');
 async function helpCommand(sock, chatId, message) {
 
 const helpMessage = `
-╭━━━〔 ⚡ Z E N I T S U  •  M E N U ⚡ 〕━━━╮
-┃ ⚔️ Bot: ${settings.botName || 'Zenitsu-Bot'}
-┃ 👑 Owner: ${settings.botOwner || 'Chris Gaaju'}
-┃ ⚙️ Version: ${settings.version || '4.0.0'}
-┃ 🌙 Mode: Thunder Breathing
-╰━━━━━━━━━━━━━━━━━━━━━━━╯
+╭═══════════════════════╮
+│ ⚡ *Z E N I T S U  •  M E N U* ⚡
+╰═══════════════════════╯
 
-⚡ *GENERAL*
+👑 *BOT INFO*
 ╭──────────────
-│ ⚡ .menu / .help
+│ ⚡ Bot: ${settings.botName || 'Zenitsu-Bot'}
+│ 👑 Owner: ${settings.botOwner || 'Chris Gaaju'}
+│ ⚙️ Version: ${settings.version || '4.0.0'}
+│ 🌙 Mode: Thunder Breathing
+╰──────────────
+
+⚡ *GENERAL COMMANDS*
+╭──────────────
+│ ⚡ .menu
+│ ⚡ .help
 │ ⚡ .ping
 │ ⚡ .alive
 │ ⚡ .tts <text>
 │ ⚡ .owner
-│ ⚡ .joke / .quote / .fact
+│ ⚡ .joke
+│ ⚡ .quote
+│ ⚡ .fact
 │ ⚡ .weather <city>
 │ ⚡ .lyrics <song>
-│ ⚡ .vv / .trt / .ss
+│ ⚡ .vv
+│ ⚡ .trt
+│ ⚡ .ss
 ╰──────────────
 
 👥 *ADMIN CONTROL*
 ╭──────────────
-│ ⚡ .ban / .kick
-│ ⚡ .promote / .demote
-│ ⚡ .mute / .unmute
-│ ⚡ .warn / .warnings
-│ ⚡ .antilink / .antibadword
-│ ⚡ .tagall / .hidetag
-│ ⚡ .welcome / .goodbye
-│ ⚡ .setgname / .setgdesc
+│ ⚡ .ban
+│ ⚡ .kick
+│ ⚡ .promote
+│ ⚡ .demote
+│ ⚡ .mute
+│ ⚡ .unmute
+│ ⚡ .warn
+│ ⚡ .warnings
+│ ⚡ .antilink
+│ ⚡ .antibadword
+│ ⚡ .tagall
+│ ⚡ .hidetag
+│ ⚡ .welcome
+│ ⚡ .goodbye
+│ ⚡ .setgname
+│ ⚡ .setgdesc
 ╰──────────────
 
 👑 *OWNER CORE*
 ╭──────────────
-│ ⚡ .mode <public/private>
-│ ⚡ .update / .settings
-│ ⚡ .autoread / .autotyping
-│ ⚡ .anticall / .pmblocker
-│ ⚡ .setpp / .clearsession
+│ ⚡ .mode public
+│ ⚡ .mode private
+│ ⚡ .update
+│ ⚡ .settings
+│ ⚡ .autoread
+│ ⚡ .autotyping
+│ ⚡ .anticall
+│ ⚡ .pmblocker
+│ ⚡ .setpp
+│ ⚡ .clearsession
 ╰──────────────
 
 🎨 *MEDIA / STICKER*
 ╭──────────────
-│ ⚡ .sticker / .simage
-│ ⚡ .removebg / .remini
-│ ⚡ .meme / .take
+│ ⚡ .sticker
+│ ⚡ .simage
+│ ⚡ .removebg
+│ ⚡ .remini
+│ ⚡ .meme
+│ ⚡ .take
 │ ⚡ .emojimix
-│ ⚡ .igs / .igsc
+│ ⚡ .igs
+│ ⚡ .igsc
 ╰──────────────
 
 🎮 *GAMES*
@@ -60,7 +87,8 @@ const helpMessage = `
 │ ⚡ .tictactoe
 │ ⚡ .hangman
 │ ⚡ .trivia
-│ ⚡ .truth / .dare
+│ ⚡ .truth
+│ ⚡ .dare
 ╰──────────────
 
 🤖 *AI POWER*
@@ -68,43 +96,54 @@ const helpMessage = `
 │ ⚡ .gpt
 │ ⚡ .gemini
 │ ⚡ .imagine
-│ ⚡ .flux / .sora
+│ ⚡ .flux
+│ ⚡ .sora
 ╰──────────────
 
 🎭 *FUN ZONE*
 ╭──────────────
-│ ⚡ .compliment / .insult
-│ ⚡ .flirt / .shayari
-│ ⚡ .ship / .simp
+│ ⚡ .compliment
+│ ⚡ .insult
+│ ⚡ .flirt
+│ ⚡ .shayari
+│ ⚡ .ship
+│ ⚡ .simp
 │ ⚡ .character
 ╰──────────────
 
 🔤 *TEXT MAKER*
 ╭──────────────
-│ ⚡ .neon / .matrix
-│ ⚡ .glitch / .fire
-│ ⚡ .hacker / .devil
-│ ⚡ .thunder ⚡
+│ ⚡ .neon
+│ ⚡ .matrix
+│ ⚡ .glitch
+│ ⚡ .fire
+│ ⚡ .hacker
+│ ⚡ .devil
+│ ⚡ .thunder
 ╰──────────────
 
 📥 *DOWNLOADER*
 ╭──────────────
-│ ⚡ .play / .song
+│ ⚡ .play
+│ ⚡ .song
 │ ⚡ .spotify
-│ ⚡ .tiktok / .instagram
+│ ⚡ .tiktok
+│ ⚡ .instagram
 │ ⚡ .ytmp4
 ╰──────────────
 
 💻 *GITHUB*
 ╭──────────────
-│ ⚡ .repo / .script
-│ ⚡ .github / .sc
+│ ⚡ .repo
+│ ⚡ .script
+│ ⚡ .github
+│ ⚡ .sc
 ╰──────────────
 
-╭━━━〔 ⚡ STATUS ⚡ 〕━━━╮
-┃ “Sleep... then strike like thunder.”
-┃        — Zenitsu Mode ⚡
-╰━━━━━━━━━━━━━━━━━━━━━━━╯
+╭═══════════════════════╮
+│ ⚡ “Sleep... then strike like thunder.”
+│        — Zenitsu Mode ⚡
+╰═══════════════════════╯
 `;
 
 try {
@@ -139,12 +178,15 @@ try {
                     serverMessageId: -1
                 }
             }
-        });
+        }, { quoted: message });
     }
 
 } catch (error) {
     console.error('Menu Error:', error);
-    await sock.sendMessage(chatId, { text: helpMessage });
+
+    await sock.sendMessage(chatId, {
+        text: helpMessage
+    }, { quoted: message });
 }
 }
 

@@ -5,148 +5,245 @@ const path = require('path');
 async function helpCommand(sock, chatId, message) {
 
 const helpMessage = `
-╭═══════════════════════╮
-│ ⚡ *Z E N I T S U  •  M E N U* ⚡
-╰═══════════════════════╯
+╭═══════════════════════════╮
+│ ⚡ *Z E N I T S U • M E N U* ⚡
+╰═══════════════════════════╯
+
 
 👑 *BOT INFO*
-╭──────────────
+╭──────────────────
 │ ⚡ Bot: ${settings.botName || 'Zenitsu-Bot'}
+
 │ 👑 Owner: ${settings.botOwner || 'Chris Gaaju'}
+
 │ ⚙️ Version: ${settings.version || '4.0.0'}
+
 │ 🌙 Mode: Thunder Breathing
-╰──────────────
+╰──────────────────
+
 
 ⚡ *GENERAL COMMANDS*
-╭──────────────
+╭──────────────────
 │ ⚡ .menu
+
 │ ⚡ .help
+
 │ ⚡ .ping
+
 │ ⚡ .alive
+
 │ ⚡ .tts <text>
+
 │ ⚡ .owner
+
 │ ⚡ .joke
+
 │ ⚡ .quote
+
 │ ⚡ .fact
+
 │ ⚡ .weather <city>
+
 │ ⚡ .lyrics <song>
+
 │ ⚡ .vv
+
 │ ⚡ .trt
+
 │ ⚡ .ss
-╰──────────────
+╰──────────────────
+
 
 👥 *ADMIN CONTROL*
-╭──────────────
+╭──────────────────
 │ ⚡ .ban
+
 │ ⚡ .kick
+
 │ ⚡ .promote
+
 │ ⚡ .demote
+
 │ ⚡ .mute
+
 │ ⚡ .unmute
+
 │ ⚡ .warn
+
 │ ⚡ .warnings
+
 │ ⚡ .antilink
+
 │ ⚡ .antibadword
+
 │ ⚡ .tagall
+
 │ ⚡ .hidetag
+
 │ ⚡ .welcome
+
 │ ⚡ .goodbye
+
 │ ⚡ .setgname
+
 │ ⚡ .setgdesc
-╰──────────────
+╰──────────────────
+
 
 👑 *OWNER CORE*
-╭──────────────
+╭──────────────────
 │ ⚡ .mode public
+
 │ ⚡ .mode private
+
 │ ⚡ .update
+
 │ ⚡ .settings
+
 │ ⚡ .autoread
+
 │ ⚡ .autotyping
+
 │ ⚡ .anticall
+
 │ ⚡ .pmblocker
+
 │ ⚡ .setpp
+
 │ ⚡ .clearsession
-╰──────────────
+╰──────────────────
+
 
 🎨 *MEDIA / STICKER*
-╭──────────────
+╭──────────────────
 │ ⚡ .sticker
+
 │ ⚡ .simage
+
 │ ⚡ .removebg
+
 │ ⚡ .remini
+
 │ ⚡ .meme
+
 │ ⚡ .take
+
 │ ⚡ .emojimix
+
 │ ⚡ .igs
+
 │ ⚡ .igsc
-╰──────────────
+╰──────────────────
+
 
 🎮 *GAMES*
-╭──────────────
+╭──────────────────
 │ ⚡ .tictactoe
+
 │ ⚡ .hangman
+
 │ ⚡ .trivia
+
 │ ⚡ .truth
+
 │ ⚡ .dare
-╰──────────────
+╰──────────────────
+
 
 🤖 *AI POWER*
-╭──────────────
+╭──────────────────
 │ ⚡ .gpt
+
 │ ⚡ .gemini
+
 │ ⚡ .imagine
+
 │ ⚡ .flux
+
 │ ⚡ .sora
-╰──────────────
+╰──────────────────
+
 
 🎭 *FUN ZONE*
-╭──────────────
+╭──────────────────
 │ ⚡ .compliment
+
 │ ⚡ .insult
+
 │ ⚡ .flirt
+
 │ ⚡ .shayari
+
 │ ⚡ .ship
+
 │ ⚡ .simp
+
 │ ⚡ .character
-╰──────────────
+╰──────────────────
+
 
 🔤 *TEXT MAKER*
-╭──────────────
+╭──────────────────
 │ ⚡ .neon
+
 │ ⚡ .matrix
+
 │ ⚡ .glitch
+
 │ ⚡ .fire
+
 │ ⚡ .hacker
+
 │ ⚡ .devil
+
 │ ⚡ .thunder
-╰──────────────
+╰──────────────────
+
 
 📥 *DOWNLOADER*
-╭──────────────
+╭──────────────────
 │ ⚡ .play
+
 │ ⚡ .song
+
 │ ⚡ .spotify
+
 │ ⚡ .tiktok
+
 │ ⚡ .instagram
+
 │ ⚡ .ytmp4
-╰──────────────
+╰──────────────────
+
 
 💻 *GITHUB*
-╭──────────────
+╭──────────────────
 │ ⚡ .repo
-│ ⚡ .script
-│ ⚡ .github
-│ ⚡ .sc
-╰──────────────
 
-╭═══════════════════════╮
+│ ⚡ .script
+
+│ ⚡ .github
+
+│ ⚡ .sc
+╰──────────────────
+
+
+╭═══════════════════════════╮
 │ ⚡ “Sleep... then strike like thunder.”
-│        — Zenitsu Mode ⚡
-╰═══════════════════════╯
+│         — Zenitsu Mode ⚡
+╰═══════════════════════════╯
 `;
 
 try {
+
+    // ⚔️ MENU REACTION
+    await sock.sendMessage(chatId, {
+        react: {
+            text: '⚔️',
+            key: message.key
+        }
+    });
+
     const imagePath = path.join(__dirname, '../assets/bot_image.jpg');
 
     if (fs.existsSync(imagePath)) {

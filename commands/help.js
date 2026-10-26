@@ -6,17 +6,28 @@ async function helpCommand(sock, chatId, message) {
 
     const readMore = '\u200E'.repeat(4000);
 
-    // Bot mode
     const botMode = settings.mode || 'public';
 
+    // Calculate bot uptime
+    const formatUptime = (seconds) => {
+        const days = Math.floor(seconds / 86400);
+        const hours = Math.floor((seconds % 86400) / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const secs = Math.floor(seconds % 60);
 
-┏━『 ZENITSU BOT 』
+        return `${days}d ${hours}h ${minutes}m ${secs}s`;
+    };
+
+    const uptime = formatUptime(process.uptime());
+
+    const helpMessage = `
+┏━『 *ZENITSU BOT* 』
 ┃ ⚡ Version: ${settings.version || '3.0.0'}
 ┃ 👨‍💻 Developer: ${settings.botOwner || 'Chris Gaaju'}
 ┃ 🌐 Multi-Device Bot
 ┃ 🔐 Mode: ${botMode.toString().toUpperCase()}
+┃ ⏱️ Uptime: ${uptime}
 ┗━━━━━━━━━━━━━━
-
 ${readMore}
 
 ╭─「 🌐 GENERAL COMMANDS 」
@@ -196,6 +207,8 @@ ${readMore}
 │ ➧ .video
 │ ➧ .ytmp4
 ╰━━━━━━━━━━━━━━
+
+${readMore}
 
 ╭─「 🧩 MISC COMMANDS 」
 │

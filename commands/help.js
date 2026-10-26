@@ -3,113 +3,134 @@ const fs = require('fs');
 const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
-    const readMore = '\u200E'.repeat(3);
+
+    const readMore = '\u200E'.repeat(4000);
+
+    // Bot mode
+    const botMode = settings.mode || 'public';
 
     const helpMessage = `
+${readMore}
+${readMore}
+${readMore}
+${readMore}
+
 ┏━『 ZENITSU BOT 』
 ┃ ⚡ Version: ${settings.version || '3.0.0'}
 ┃ 👨‍💻 Developer: ${settings.botOwner || 'Chris Gaaju'}
 ┃ 🌐 Multi-Device Bot
+┃ 🔐 Mode: ${botMode.toString().toUpperCase()}
 ┗━━━━━━━━━━━━━━
 
+╭─「 🔗 OFFICIAL LINKS 」
+│
+│ 👥 Official Group
+│ https://chat.whatsapp.com/DXksVb4su2cHKxrmKktHQd
+│
+│ 📢 Official Channel
+│ https://whatsapp.com/channel/0029VbBvGgyFsn0alyIDjw0z
+╰━━━━━━━━━━━━━━
+
 ${readMore}
+
 ╭─「 🌐 GENERAL COMMANDS 」
 │
 │ ➧ .help
 │ ➧ .ping
 │ ➧ .alive
-│ ➧ .tts <text>
+│ ➧ .tts
 │ ➧ .owner
 │ ➧ .joke
 │ ➧ .quote
 │ ➧ .fact
-│ ➧ .weather <city>
+│ ➧ .weather
 │ ➧ .news
-│ ➧ .attp <text>
-│ ➧ .lyrics <song_title>
-│ ➧ .8ball <question>
+│ ➧ .attp
+│ ➧ .lyrics
+│ ➧ .8ball
 │ ➧ .groupinfo
 │ ➧ .staff / .admins
 │ ➧ .vv
 │ ➧ .vv2
-│ ➧ .trt <text> <lang>
-│ ➧ .ss <link>
+│ ➧ .trt
+│ ➧ .ss
 │ ➧ .jid
 │ ➧ .url
 ╰━━━━━━━━━━━━━━
 
 ╭─「 👮 ADMIN COMMANDS 」
 │
-│ ➧ .ban @user
-│ ➧ .promote @user
-│ ➧ .demote @user
-│ ➧ .mute <minutes>
+│ ➧ .ban
+│ ➧ .promote
+│ ➧ .demote
+│ ➧ .mute
 │ ➧ .unmute
 │ ➧ .delete / .del
-│ ➧ .kick @user
-│ ➧ .warnings @user
-│ ➧ .warn @user
+│ ➧ .kick
+│ ➧ .warnings
+│ ➧ .warn
 │ ➧ .antilink
 │ ➧ .antibadword
 │ ➧ .clear
-│ ➧ .tag <message>
+│ ➧ .tag
 │ ➧ .tagall
 │ ➧ .tagnotadmin
-│ ➧ .hidetag <message>
+│ ➧ .hidetag
 │ ➧ .chatbot
 │ ➧ .resetlink
-│ ➧ .antitag <on/off>
-│ ➧ .welcome <on/off>
-│ ➧ .goodbye <on/off>
-│ ➧ .antibot <on/off/set/get>
-│ ➧ .setgdesc <description>
-│ ➧ .setgname <new name>
-│ ➧ .setgpp (reply to image)
-│ ➧ .groupstatus [caption/text]
+│ ➧ .antitag
+│ ➧ .welcome
+│ ➧ .goodbye
+│ ➧ .antibot
+│ ➧ .setgdesc
+│ ➧ .setgname
+│ ➧ .setgpp
+│ ➧ .groupstatus
 ╰━━━━━━━━━━━━━━
+
+${readMore}
 
 ╭─「 🔐 OWNER COMMANDS 」
 │
-│ ➧ .mode <public/private>
+│ ➧ .mode
 │ ➧ .clearsession
 │ ➧ .antidelete
 │ ➧ .cleartmp
 │ ➧ .update
 │ ➧ .settings
-│ ➧ .setpp <reply to image>
-│ ➧ .autoreact <on/off>
-│ ➧ .autostatus <on/off>
-│ ➧ .autostatus react <on/off>
-│ ➧ .savestatus [on/off]
-│ ➧ .autotyping <on/off>
-│ ➧ .autoread <on/off>
-│ ➧ .anticall <on/off>
-│ ➧ .pmblocker <on/off/status>
-│ ➧ .pmblocker setmsg <text>
-│ ➧ .setmention <reply to msg>
-│ ➧ .mention <on/off>
+│ ➧ .setpp
+│ ➧ .autoreact
+│ ➧ .autostatus
+│ ➧ .autostatus react
+│ ➧ .savestatus
+│ ➧ .autotyping
+│ ➧ .autoread
+│ ➧ .anticall
+│ ➧ .pmblocker
+│ ➧ .pmblocker setmsg
+│ ➧ .setmention
+│ ➧ .mention
 ╰━━━━━━━━━━━━━━
 
-${readMore}
 ╭─「 🎨 IMAGE & STICKER 」
 │
-│ ➧ .blur <image>
-│ ➧ .simage <reply to sticker>
-│ ➧ .sticker <reply to image>
+│ ➧ .blur
+│ ➧ .simage
+│ ➧ .sticker
 │ ➧ .removebg
 │ ➧ .remini
-│ ➧ .crop (reply to sticker/image/video)
-│ ➧ .tgsticker <link>
+│ ➧ .crop
+│ ➧ .tgsticker
 │ ➧ .meme
-│ ➧ .take <packname>
-│ ➧ .emojimix <emj1>+<emj2>
-│ ➧ .igs <insta link>
-│ ➧ .igsc <insta link>
+│ ➧ .take
+│ ➧ .emojimix
+│ ➧ .igs
+│ ➧ .igsc
 ╰━━━━━━━━━━━━━━
 
 ╭─「 🖼️ PIES COMMANDS 」
 │
-│ ➧ .pies <country>
+│ ➧ .pies
 │ ➧ .china
 │ ➧ .indonesia
 │ ➧ .japan
@@ -119,74 +140,75 @@ ${readMore}
 
 ╭─「 🎮 GAME COMMANDS 」
 │
-│ ➧ .tictactoe @user
+│ ➧ .tictactoe
 │ ➧ .hangman
-│ ➧ .guess <letter>
+│ ➧ .guess
 │ ➧ .trivia
-│ ➧ .answer <answer>
+│ ➧ .answer
 │ ➧ .truth
 │ ➧ .dare
 ╰━━━━━━━━━━━━━━
 
+${readMore}
+
 ╭─「 🤖 AI COMMANDS 」
 │
-│ ➧ .ai <question>
-│ ➧ .gpt <question>
-│ ➧ .gemini <question>
-│ ➧ .imagine <prompt>
-│ ➧ .flux <prompt>
-│ ➧ .sora <prompt>
+│ ➧ .ai
+│ ➧ .gpt
+│ ➧ .gemini
+│ ➧ .imagine
+│ ➧ .flux
+│ ➧ .sora
 ╰━━━━━━━━━━━━━━
 
 ╭─「 🎯 FUN COMMANDS 」
 │
-│ ➧ .compliment @user
-│ ➧ .insult @user
+│ ➧ .compliment
+│ ➧ .insult
 │ ➧ .flirt
 │ ➧ .shayari
 │ ➧ .goodnight
 │ ➧ .roseday
-│ ➧ .character @user
-│ ➧ .wasted @user
-│ ➧ .ship @user
-│ ➧ .simp @user
-│ ➧ .stupid @user [text]
+│ ➧ .character
+│ ➧ .wasted
+│ ➧ .ship
+│ ➧ .simp
+│ ➧ .stupid
 ╰━━━━━━━━━━━━━━
 
-${readMore}
 ╭─「 🔤 TEXTMAKER 」
 │
-│ ➧ .metallic <text>
-│ ➧ .ice <text>
-│ ➧ .snow <text>
-│ ➧ .impressive <text>
-│ ➧ .matrix <text>
-│ ➧ .light <text>
-│ ➧ .neon <text>
-│ ➧ .devil <text>
-│ ➧ .purple <text>
-│ ➧ .thunder <text>
-│ ➧ .leaves <text>
-│ ➧ .1917 <text>
-│ ➧ .arena <text>
-│ ➧ .hacker <text>
-│ ➧ .sand <text>
-│ ➧ .blackpink <text>
-│ ➧ .glitch <text>
-│ ➧ .fire <text>
+│ ➧ .metallic
+│ ➧ .ice
+│ ➧ .snow
+│ ➧ .impressive
+│ ➧ .matrix
+│ ➧ .light
+│ ➧ .neon
+│ ➧ .devil
+│ ➧ .purple
+│ ➧ .thunder
+│ ➧ .leaves
+│ ➧ .1917
+│ ➧ .arena
+│ ➧ .hacker
+│ ➧ .sand
+│ ➧ .blackpink
+│ ➧ .glitch
+│ ➧ .fire
 ╰━━━━━━━━━━━━━━
 
 ╭─「 📥 DOWNLOADER 」
 │
-│ ➧ .play <song_name>
-│ ➧ .song <song_name>
-│ ➧ .spotify <query>
-│ ➧ .instagram <link>
-│ ➧ .facebook <link>
-│ ➧ .twitter <link>
-│ ➧ .tiktok <link>
-│ ➧ .video <song name>
-│ ➧ .ytmp4 <link>
+│ ➧ .play
+│ ➧ .song
+│ ➧ .spotify
+│ ➧ .instagram
+│ ➧ .facebook
+│ ➧ .twitter
+│ ➧ .tiktok
+│ ➧ .video
+│ ➧ .ytmp4
 ╰━━━━━━━━━━━━━━
 
 ╭─「 🧩 MISC COMMANDS 」
@@ -229,7 +251,6 @@ ${readMore}
 │ ➧ .script
 │ ➧ .repo
 ╰━━━━━━━━━━━━━━
-
 `;
 
     try {

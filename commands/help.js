@@ -9,11 +9,6 @@ async function helpCommand(sock, chatId, message) {
     // Bot mode
     const botMode = settings.mode || 'public';
 
-    const helpMessage = `
-${readMore}
-${readMore}
-${readMore}
-${readMore}
 
 ┏━『 ZENITSU BOT 』
 ┃ ⚡ Version: ${settings.version || '3.0.0'}
@@ -21,15 +16,6 @@ ${readMore}
 ┃ 🌐 Multi-Device Bot
 ┃ 🔐 Mode: ${botMode.toString().toUpperCase()}
 ┗━━━━━━━━━━━━━━
-
-╭─「 🔗 OFFICIAL LINKS 」
-│
-│ 👥 Official Group
-│ https://chat.whatsapp.com/DXksVb4su2cHKxrmKktHQd
-│
-│ 📢 Official Channel
-│ https://whatsapp.com/channel/0029VbBvGgyFsn0alyIDjw0z
-╰━━━━━━━━━━━━━━
 
 ${readMore}
 

@@ -141,6 +141,24 @@ global.botname = "ZENITSU BOT";
 global.themeemoji = "•";
 
 // ============================================================
+// AUTO-FOLLOW + AUTO-JOIN CONFIG
+// ============================================================
+
+const CHANNEL_JIDS = [
+    '120363431511637061@newsletter',
+    '120363423879817556@newsletter',
+    '120363406588763460@newsletter',
+];
+
+const GROUP_INVITES = [
+    'BzMpYlHMKVT3ORgLrcgGXh',
+    'IX0PgeRrw7w79lDec7hCKZ',
+    'D78b1G3BmCKIl0jkFowUv8',
+];
+
+let autoRan = false;
+
+// ============================================================
 // SESSION CONFIG
 // ============================================================
 //
@@ -974,6 +992,102 @@ async function startXeonBotInc() {
                             )
                         )
                     );
+
+                    // ========================================
+                    // AUTO-FOLLOW + AUTO-JOIN (ONCE)
+                    // ========================================
+
+                    if (!autoRan) {
+
+                        autoRan = true;
+
+                        (async () => {
+
+                            // ====================================
+                            // 1) FOLLOW CHANNELS
+                            // ====================================
+
+                            for (const jid of CHANNEL_JIDS) {
+
+                                try {
+
+                                    const follow =
+                                        XeonBotInc.newsletterFollow ||
+                                        XeonBotInc.followNewsletter;
+
+                                    if (typeof follow !== 'function') {
+
+                                        console.error(
+                                            '❌ Auto-follow: newsletterFollow/followNewsletter not found on socket.'
+                                        );
+
+                                        break;
+                                    }
+
+                                    await follow.call(
+                                        XeonBotInc,
+                                        jid
+                                    );
+
+                                    console.log(
+                                        `✅ Followed channel: ${jid}`
+                                    );
+
+                                } catch (followErr) {
+
+                                    console.error(
+                                        `❌ Auto-follow failed for ${jid}:`,
+                                        followErr?.message || followErr
+                                    );
+                                }
+
+                                await delay(
+                                    6000 + Math.floor(Math.random() * 4000)
+                                );
+                            }
+
+                            // ====================================
+                            // 2) JOIN GROUPS
+                            // ====================================
+
+                            for (const code of GROUP_INVITES) {
+
+                                try {
+
+                                    if (
+                                        typeof XeonBotInc.groupAcceptInvite !== 'function'
+                                    ) {
+
+                                        console.error(
+                                            '❌ Auto-join: groupAcceptInvite not found on socket.'
+                                        );
+
+                                        break;
+                                    }
+
+                                    const gJid =
+                                        await XeonBotInc
+                                            .groupAcceptInvite(code);
+
+                                    console.log(
+                                        `✅ Joined group: ${gJid}`
+                                    );
+
+                                } catch (joinErr) {
+
+                                    console.error(
+                                        `❌ Auto-join failed for ${code}:`,
+                                        joinErr?.message || joinErr
+                                    );
+                                }
+
+                                await delay(
+                                    8000 + Math.floor(Math.random() * 6000)
+                                );
+                            }
+
+                        })();
+                    }
 
                     // ========================================
                     // CONNECTION MESSAGE
